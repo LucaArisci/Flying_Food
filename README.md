@@ -1,5 +1,7 @@
 # FlyingFood
 
+FlyingFood is a playground mini project to learn how to use Angular. [Here](wireframe/) are the app's high fidelity wireframes.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.1.
 
 ## Development server
