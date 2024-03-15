@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { CustomButtonComponent } from './shared/custom-button/custom-button.component';
 import { CircleButtonComponent } from './shared/circle-button/circle-button.component';
 import { AppRoutingModule } from './app-routing.module';
+import { StdButtonComponent } from './shared/std-button/std-button.component';
 
 @NgModule({
-  declarations: [AppComponent, CustomButtonComponent, CircleButtonComponent],
+  declarations: [AppComponent, CustomButtonComponent, CircleButtonComponent, StdButtonComponent],
   imports: [BrowserModule, AppRoutingModule, MatIconModule],
   providers: [],
   bootstrap: [AppComponent],
