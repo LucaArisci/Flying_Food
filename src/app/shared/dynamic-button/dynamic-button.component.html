@@ -1,0 +1,28 @@
+<ng-container [ngSwitch]="btnType">
+  <ng-container *ngSwitchCase="'circle'">
+    <div class="circle-button">
+      <mat-icon
+        aria-hidden="false"
+        aria-label="Example home icon"
+        fontIcon="home"
+      ></mat-icon>
+    </div>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'standard'">
+    <div class="std-button"><p>Text</p></div>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'custom'">
+    <div class="custom-button">
+      <div class="circle-button">
+        <mat-icon
+          aria-hidden="false"
+          aria-label="Example home icon"
+          fontIcon="home"
+        ></mat-icon>
+      </div>
+      <div class="std-button"><p>Text</p></div>
+    </div>
+  </ng-container>
+</ng-container>

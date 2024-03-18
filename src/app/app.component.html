@@ -1,8 +1,8 @@
 <main class="main-section">
   <nav class="main-nav">
-    <app-circle-button></app-circle-button>
-    <app-custom-button></app-custom-button>
-    <app-std-button></app-std-button>
+    <app-dynamic-button [btnType]="'circle'"></app-dynamic-button>
+    <app-dynamic-button [btnType]="'standard'"></app-dynamic-button>
+    <app-dynamic-button [btnType]="'custom'"></app-dynamic-button>
   </nav>
   <nav class="secondary-nav"></nav>
   <section class="content-container"></section>
