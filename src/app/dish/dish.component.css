@@ -1,0 +1,26 @@
+.card-container {
+  background-color: blue;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-image {
+  width: 14rem;
+  position: relative;
+  /* margin: 0 auto; */
+}
+
+.card-title {
+}
+
+.card-text {
+}
+
+.card-price {
+}
+
+.card-weight {
+}
