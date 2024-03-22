@@ -1,8 +1,8 @@
 .circle-button {
   width: 3rem;
   height: 3rem;
-  background-color: black;
-  color: white;
+  background-color: backgroundDark;
+  color: var(--text1);
   display: flex;
   justify-content: center;
   align-items: center;

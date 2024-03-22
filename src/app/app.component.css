@@ -1,5 +1,12 @@
+:host {
+  --backgroundDark: rgb(16, 16, 19);
+  --backgroundNormal: rgb(23, 23, 28);
+  --backgroundLight: rgb(39, 39, 47);
+  --text1: rgb(255, 255, 255);
+}
+
 .main-section {
-  background-color: blue;
+  background-color: var(--backgroundNormal);
   display: grid;
   width: 100%;
   height: 100vh;
@@ -8,7 +15,7 @@
 }
 
 .main-nav {
-  background-color: red;
+  background-color: var(--backgroundNormal);
   grid-area: 1 / 1 / 13 / 2;
   display: flex;
   flex-direction: column;
@@ -16,11 +23,13 @@
 }
 
 .secondary-nav {
-  background-color: green;
+  background-color: var(--backgroundNormal);
   grid-area: 1 / 2 / 2 / 7;
 }
 
 .content-container {
-  background-color: yellow;
+  background-color: var(--backgroundDark);
   grid-area: 2 / 2 / 13 / 7;
+  padding: 3rem;
+  border-radius: 3rem 0 0 0;
 }
