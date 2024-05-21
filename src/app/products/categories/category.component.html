@@ -1,0 +1,15 @@
+<div class="categories-container">
+  <div
+    class="category-container"
+    *ngFor="let category of categories | showCategory"
+    (click)="onSelectedCategory(category.id)"
+    [ngClass]="{
+      'category-selected': this.filterService.filterValue === category.id
+    }"
+  >
+    <div class="category-image-container">
+      <img src="{{ category.imageUrl }}" alt="" class="category-image" />
+    </div>
+    <h3 class="category-title">{{ category.namePlural }}</h3>
+  </div>
+</div>
