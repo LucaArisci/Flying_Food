@@ -1,0 +1,16 @@
+<div class="menu-container">
+  <div class="menu-voice" *ngFor="let voice of menuService.menu">
+    <app-dynamic-button
+      [btnType]="'custom'"
+      [btnIcon]="voice.icon"
+      [btnClass]="'menu-std'"
+      [btnText]="voice.name"
+      [selected]="voice.isSelected"
+    ></app-dynamic-button>
+  </div>
+  <!-- <ng-container *ngIf="stateStoreService.state | async as menu">
+    <pre>{{ menu | json }}</pre>
+    <button (click)="addDish(menu)">Add Dish</button>
+    <button (click)="removeDish()">Remove Dish</button>
+  </ng-container> -->
+</div>
