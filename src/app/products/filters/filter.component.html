@@ -1,0 +1,13 @@
+<div class="filters-container">
+  <select
+    [(ngModel)]="selectedFilter"
+    (ngModelChange)="onSelectedFilter($event)"
+  >
+    <option
+      *ngFor="let field of this.filterService.availableFilters"
+      [ngValue]="field.value"
+    >
+      {{ field.label }}
+    </option>
+  </select>
+</div>
