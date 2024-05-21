@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 0 2rem 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: var(--white);
+}
