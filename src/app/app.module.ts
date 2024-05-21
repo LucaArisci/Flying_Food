@@ -23,11 +23,13 @@ import { FilterByPipe } from './pipes/filterBy.pipe';
 import { FilterService } from './services/filter.service';
 import { FilterComponent } from './products/filters/filter.component';
 import { FormsModule } from '@angular/forms';
+import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DynamicButtonComponent,
+    PageNotFoundComponent,
     ProductsComponent,
     CategoryComponent,
     DishComponent,
