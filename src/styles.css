@@ -1,3 +1,21 @@
+:root {
+  --black: rgb(15, 15, 20);
+  --dark-gray-2: rgb(25, 25, 30);
+  --dark-gray-1: rgb(35, 35, 40);
+  --medium-gray-2: rgb(40, 40, 50);
+  --medium-gray-1: rgb(65, 65, 70);
+  --light-gray-2: rgb(95, 95, 95);
+  --light-gray-1: rgb(150, 150, 150);
+  --white: rgb(255, 255, 255);
+
+  --dark-red: rgb(101, 28, 36);
+  --medium-red: rgb(220, 50, 55);
+  --light-red: rgb(228, 79, 90);
+
+  --dark-green: rgb(19, 45, 30);
+  --medium-green: rgb(101, 193, 91);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +28,7 @@
 html,
 body {
   height: 100%;
+  user-select: none;
 }
 
 html {
