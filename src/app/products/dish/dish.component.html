@@ -1,0 +1,34 @@
+<div class="list-container">
+  <div
+    class="card-container"
+    *ngFor="
+      let dish of dishService.dishes | filterBy : filterService.selectedFilter
+    "
+  >
+    <div class="card-background"></div>
+    <div class="card-image-container">
+      <img src="{{ dish.imageUrl }}" alt="" class="card-image" />
+    </div>
+    <h3 class="card-title">{{ dish.name }}</h3>
+    <p class="card-text">
+      {{ dish.description | maxLength : 60 }}
+    </p>
+    <div class="card-bottom">
+      <div class="card-bottom-left">
+        <p class="card-price">
+          {{ dish.price.type | currency }} {{ dish.price.value }}
+        </p>
+      </div>
+      <div class="card-bottom-right">
+        <p class="card-weight">
+          {{ dish.size.value | unit }} {{ dish.size.type | unit }}
+        </p>
+        <app-dynamic-button
+          [btnType]="'circle'"
+          [btnIcon]="'add'"
+          [btnClass]="'green'"
+        ></app-dynamic-button>
+      </div>
+    </div>
+  </div>
+</div>
