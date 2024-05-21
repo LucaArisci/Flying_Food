@@ -1,28 +1,40 @@
 <ng-container [ngSwitch]="btnType">
   <ng-container *ngSwitchCase="'circle'">
-    <div class="circle-button">
+    <div
+      class="circle-button"
+      [ngClass]="btnClass"
+      (click)="toggleSelectionCircleBtn()"
+    >
       <mat-icon
         aria-hidden="false"
         aria-label="Example home icon"
-        fontIcon="home"
+        fontIcon="{{ btnIcon }}"
       ></mat-icon>
     </div>
   </ng-container>
 
   <ng-container *ngSwitchCase="'standard'">
-    <div class="std-button"><p>Text</p></div>
+    <div
+      class="std-button"
+      [ngClass]="btnClass"
+      (click)="toggleSelectionStandardBtn()"
+    >
+      <p>{{ btnText }}</p>
+    </div>
   </ng-container>
 
   <ng-container *ngSwitchCase="'custom'">
-    <div class="custom-button">
-      <div class="circle-button">
+    <div class="custom-button" (click)="toggleSelectionCustomBtn()">
+      <div class="circle-button" [ngClass]="btnClass">
         <mat-icon
           aria-hidden="false"
           aria-label="Example home icon"
-          fontIcon="home"
+          fontIcon="{{ btnIcon }}"
         ></mat-icon>
       </div>
-      <div class="std-button"><p>Text</p></div>
+      <div class="std-button" [ngClass]="btnClass">
+        <p>{{ btnText }}</p>
+      </div>
     </div>
   </ng-container>
 </ng-container>

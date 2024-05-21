@@ -1,8 +1,8 @@
 .circle-button {
   width: 3rem;
   height: 3rem;
-  background-color: backgroundDark;
-  color: var(--text1);
+  background-color: var(--dark-red);
+  color: var(--white);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,11 +15,12 @@
 
 .std-button {
   width: 10rem;
-  padding: 0.9rem 3rem;
+  padding: 1rem 3rem;
   border-radius: 3rem;
   font-size: 1rem;
-  background-color: white;
-  color: black;
+  line-height: 1;
+  background-color: var(--white);
+  color: var(--black);
   text-align: center;
 }
 
@@ -39,4 +40,32 @@
   width: 11rem;
   text-align: left;
   z-index: 0;
+}
+
+.menu-std.std-button {
+  color: var(--white);
+  background-color: var(--dark-gray-2);
+}
+
+.menu-std.circle-button {
+  color: var(--light-gray-2);
+  background-color: var(--medium-gray-2);
+}
+
+.menu-selected.std-button {
+  color: var(--white);
+  background-color: var(--light-red);
+}
+
+.menu-selected.circle-button {
+  color: var(--white);
+  background-color: var(--medium-red);
+}
+
+.circle-button.green {
+  background-color: var(--medium-green);
+}
+
+.circle-button.light-red {
+  background-color: var(--light-red);
 }
