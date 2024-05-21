@@ -1,9 +1,12 @@
 <main class="main-section">
   <nav class="main-nav">
-    <app-dynamic-button [btnType]="'circle'"></app-dynamic-button>
-    <app-dynamic-button [btnType]="'standard'"></app-dynamic-button>
-    <app-dynamic-button [btnType]="'custom'"></app-dynamic-button>
+    <app-profile></app-profile>
+    <app-menu></app-menu>
+    <!-- <app-dynamic-button [btnType]="'circle'"></app-dynamic-button> -->
   </nav>
   <nav class="secondary-nav"></nav>
-  <section class="content-container"></section>
+  <div class="shadow"></div>
+  <section class="content-container">
+    <router-outlet></router-outlet>
+  </section>
 </main>

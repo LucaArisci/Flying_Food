@@ -1,12 +1,5 @@
-:host {
-  --backgroundDark: rgb(16, 16, 19);
-  --backgroundNormal: rgb(23, 23, 28);
-  --backgroundLight: rgb(39, 39, 47);
-  --text1: rgb(255, 255, 255);
-}
-
 .main-section {
-  background-color: var(--backgroundNormal);
+  background-color: var(--dark-gray-2);
   display: grid;
   width: 100%;
   height: 100vh;
@@ -15,7 +8,7 @@
 }
 
 .main-nav {
-  background-color: var(--backgroundNormal);
+  background-color: var(--dark-gray-2);
   grid-area: 1 / 1 / 13 / 2;
   display: flex;
   flex-direction: column;
@@ -23,13 +16,24 @@
 }
 
 .secondary-nav {
-  background-color: var(--backgroundNormal);
+  background-color: var(--dark-gray-2);
   grid-area: 1 / 2 / 2 / 7;
 }
 
 .content-container {
-  background-color: var(--backgroundDark);
+  background-color: var(--black);
   grid-area: 2 / 2 / 13 / 7;
   padding: 3rem;
   border-radius: 3rem 0 0 0;
+  overflow-y: scroll;
+  scrollbar-color: var(--light-gray-2) var(--black);
+  scrollbar-width: thin;
+}
+
+.shadow {
+  grid-area: 12 / 2 / 13 / 7;
+
+  background: linear-gradient(rgba(255, 255, 255, 0), var(--black) 90%) center
+    bottom;
+  z-index: 3;
 }
