@@ -3,6 +3,7 @@
     [(ngModel)]="selectedFilter"
     (ngModelChange)="onSelectedFilter($event)"
   >
+    <option disabled selected [ngValue]="undefined">Select an Option</option>
     <option
       *ngFor="let field of this.filterService.availableFilters"
       [ngValue]="field.value"

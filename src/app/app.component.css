@@ -31,9 +31,11 @@
 }
 
 .shadow {
-  grid-area: 12 / 2 / 13 / 7;
+  grid-area: 12 / 2 / 14 / 7;
 
-  background: linear-gradient(rgba(255, 255, 255, 0), var(--black) 90%) center
-    bottom;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), var(--black) 90%);
+  background-repeat: no-repeat;
+  background-size: contain;
+
   z-index: 3;
 }

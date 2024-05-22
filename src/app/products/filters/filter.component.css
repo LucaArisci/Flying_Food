@@ -2,7 +2,7 @@ select {
   color: var(--white);
   background-color: var(--black);
   border-radius: 2rem;
-  border: 1px solid var(--light-gray-1);
+  border: 0.2rem solid var(--light-gray-1);
   padding: 1rem 3.5rem 1rem 2rem;
 
   -moz-appearance: none;
@@ -13,4 +13,11 @@ select {
   background-repeat: no-repeat;
   background-position: right 1rem top 50%;
   background-size: 1.5rem auto;
+
+  outline: none;
+  transition: ease-in-out 0.2s;
+}
+
+select:hover {
+  border: 0.2rem solid var(--white);
 }
