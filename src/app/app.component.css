@@ -30,6 +30,10 @@
   scrollbar-width: thin;
 }
 
+app-loader {
+  grid-area: 2 / 2 / 13 / 7;
+}
+
 .shadow {
   grid-area: 12 / 2 / 14 / 7;
 

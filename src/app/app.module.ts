@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatIconModule } from '@angular/material/icon';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { AppComponent } from './app.component';
 import { DynamicButtonComponent } from './shared/dynamic-button/dynamic-button.component';
@@ -9,7 +10,7 @@ import { DishComponent } from './products/dish/dish.component';
 import { AppMenuComponent } from './sidebar/menu/menu.component';
 import { AppProfileComponent } from './sidebar/profile/profile.component';
 import { DishService } from './services/dish.service';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MaxLengthPipe } from './pipes/maxLength.pipe';
 import { CurrencySymbolPipe } from './pipes/currencySymbol.pipe';
 import { UnitSymbolPipe } from './pipes/unitSymbol.pipe';
@@ -24,12 +25,16 @@ import { FilterService } from './services/filter.service';
 import { FilterComponent } from './products/filters/filter.component';
 import { FormsModule } from '@angular/forms';
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
+import { LoaderComponent } from './shared/loader/loader.component';
+import { LoaderService } from './services/loader.service';
+import { LoaderInterceptor } from './interceptors/loader.interceptor';
 
 @NgModule({
   declarations: [
     AppComponent,
     DynamicButtonComponent,
     PageNotFoundComponent,
+    LoaderComponent,
     ProductsComponent,
     CategoryComponent,
     DishComponent,
@@ -46,6 +51,7 @@ import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.co
     BrowserModule,
     AppRoutingModule,
     MatIconModule,
+    MatProgressSpinnerModule,
     HttpClientModule,
     FormsModule,
   ],
@@ -55,6 +61,12 @@ import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.co
     CategoryService,
     StateStoreService,
     FilterService,
+    LoaderService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: LoaderInterceptor,
+      multi: true,
+    },
   ],
   bootstrap: [AppComponent],
 })
